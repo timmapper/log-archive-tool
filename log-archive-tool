@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+currentDate=`date +"%Y%m%d_%H%M%S"`
+
+if  `test -d $1 && test $#=1 && test $1`
+then
+	echo -e "\033[97mStart archiving..."
+	echo -e "\033[90m"
+	sudo -k tar -czvf /var/log/log-archives/logs_archive_$currentDate.tar.gz $1/*
+	echo -e "\033[97m"
+	echo -e "The archieve has been saved at \033[96m/var/log/log-archives/logs_archive_$currentDate.tar.gz"
+else
+	echo -e "\033[97mUsage: log-archive [DIRECTORY]"
+fi
+exit 0
