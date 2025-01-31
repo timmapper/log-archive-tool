@@ -12,4 +12,4 @@ bash setup.sh
 ```
 
 ## Usage
-`log-archive <>log-directory`
+`log-archive <log-directory>`
